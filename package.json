@@ -2,16 +2,14 @@
   "name": "restaurantReserver",
   "version": "1.0.0",
   "description": "Full stack, ability to make reservations",
-<<<<<<< HEAD
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
->>>>>>> 641bfa58d538f9f9048325866cc8a61cde45b1be
   },
   "repository": {
     "type": "git",
@@ -23,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/EvanErickson/restaurantReserver/issues"
   },
-  "homepage": "https://github.com/EvanErickson/restaurantReserver#readme",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/EvanErickson/restaurantReserver#readme"
 }
