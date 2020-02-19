@@ -8,57 +8,47 @@
 <body>
   <form>
     <p>
-      <label for="first_name">first name</label>
+      <label for="first_name">First Name</label>
       <input type="text" name="first_name" id="first_name">
     </p>
     <p>
-      <label for="last_name">last name</label>
+      <label for="last_name">Last Name</label>
       <input type="text" name="last_name" id="last_name">
     </p>
     <p>
-      <label for="email">email</label>
-      <input type="email" name="email" id="email">
+      <label for="phone">Phone</label>
+      <input type="phone" name="phone" id="phone">
     </p>
     <p>
-      <label for="ssn">ssn</label>
-      <input type="password" name="ssn" id="ssn">
-    </p>
-    <p>
-      <label for="department">department</label>
-      <input type="text" name="department" id="department">
-    </p>
-    <p>
-      <button id="addEmployee">Add Employee</button>
+      <button id="addReservation">Add Reservation</button>
     </p>
   </form>
-  <div id="employees"></div>
+  <div id="reservations"></div>
   
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
 
-    const getEmployees = () => {
-    axios.get('/employees')
+    const getReservations = () => {
+    axios.get('/reservations')
       .then(({ data }) => {
         document.getElementById('employees').innerHTML = JSON.stringify(data)
       })
       .catch(e => console.error(e))
     }
 
-    document.getElementById('addEmployee').addEventListener('click', event => {
+    document.getElementById('addReservation').addEventListener('click', event => {
       event.preventDefault()
-      axios.post('/employees', {
+      axios.post('/reservations', {
         first_name: document.getElementById('first_name').value,
         last_name: document.getElementById('last_name').value,
-        email: document.getElementById('email').value,
-        ssn: document.getElementById('ssn').value,
-        department: document.getElementById('department').value
+        phone: document.getElementById('phone').value
       })
         .then(() => {
-          getEmployees()
+          getReservations()
         })
     })
 
-    getEmployees()
+    getReservations()
   </script>
 </body>
 </html>
