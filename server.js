@@ -7,25 +7,25 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/employees', (req, res) => {
-  fs.readFile('employees.json', 'utf8', (e, data) => {
+app.get('/reservations', (req, res) => {
+  fs.readFile('reservations.json', 'utf8', (e, data) => {
     if (e) { console.log(e) }
 
-    const employees = JSON.parse(data)
+    const reservations = JSON.parse(data)
 
-    res.json(employees)
+    res.json(reservations)
   })
 })
 
-app.post('/employees', (req, res) => {
-  fs.readFile('employees.json', 'utf8', (e, data) => {
+app.post('/reservations', (req, res) => {
+  fs.readFile('reservations.json', 'utf8', (e, data) => {
     if (e) { console.log(e) }
 
-    const employees = JSON.parse(data)
+    const reservations = JSON.parse(data)
 
-    employees.push(req.body)
+    reservations.push(req.body)
 
-    fs.writeFile('employees.json', JSON.stringify(employees), e => {
+    fs.writeFile('reservations.json', JSON.stringify(reservations), e => {
       if (e) { console.log(e) }
       res.sendStatus(200)
     })
