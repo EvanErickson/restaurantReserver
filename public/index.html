@@ -3,34 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Document</title>
+  
+  <style>
+    .card-body {
+      background-color: lightgray;
+    }
+
+    .logo {
+      height: 75px;
+      width: 50px;
+      background-color: lightgray;
+    }
+
+    .links {
+      padding: 5px;
+      padding-top: 10px;
+    }
+  </style>
+
+
 </head>
 <body>
     <div class="container">
         <div class="row"></div>
             <div class="col-sm"></div>
 
-            <div class="col-sm">
-                
+            <div class="col-sm">  
                 <div class="card w-75">
-                <div class="card-body">
-                <h5 class="card-title">On Point Restaurant</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <div class="card-body text-center">
+                <img class="logo" src="images/logo.png"></img>
+                <h1 class="card-title">On Point Restaurant</h1>
+                <h3 class="card-text">Make memories with our 5 course menus!!!</h3>
                 <a href="#" class="btn btn-primary">View Tables</a>
-                <a href="#" class="btn btn-primary">Make Reservation</a>
+                <a href="#" class="btn btn-danger">Make Reservation</a>
                 </div>
+              </div> 
             </div>
-            
-            </div>
-        </div>
-        </div>
-    </div>
+
+          <div class="col-sm"></div>
 
     </div>
-        </div>
+
+    <div class="links">
+    <a href="http://google.com">API Table Link</a> | <a href="http://yelp.com">API Wait List</a>
     </div>
 
-  <!-- <form>
+
+  <!-- <forms>
     <p>
       <label for="first_name">first name</label>
       <input type="text" name="first_name" id="first_name">
